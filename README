@@ -1,0 +1,35 @@
+Introduction
+------------
+Netnotify-Daemon is a network notification daemon, part of netnotify project.
+It is ought to be compatible with freedesktop.org desktop notification
+specification.
+Netnotify-Daemon broadcasts incoming dbus notifications to all connected
+clients enabling remote notifications with multiple clients.
+
+Requirements
+------------
+ - glib-2.0
+ - gio-2.0
+ - dbus-1
+ - dbus-glib-1
+You will also need autotools installed if you got netnotify-daemon from git
+repository.
+
+Installation
+------------
+Netnotify-Daemon uses autotools, if you got it from git repository, you would
+need to run autogen.sh to prepare configure script, after that the installation
+procedure is standard:
+ $ ./configure
+ $ make
+ $ sudo make install
+
+Configuration
+-------------
+Currently there is no configyration file for netnotify-daemon. By default it
+binds itself to 0.0.0.0:3000. Port can be changed in src/netnotify-daemon.h.
+
+Usage
+-----
+Once itstalled netnotify-daemon should automatically start itself on any
+notification. It can also be started by hand.
